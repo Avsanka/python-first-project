@@ -1,8 +1,5 @@
-a=int(input())
-b=int(input())
-if a<b:
-   print(a)
-elif a == b:
-   print('chisla ravni')
-else:
-   print(b)
+for i in range(5):
+    for j in range(6):
+        print(i, j, sep=',', end='   ')
+    print('\n')
+
