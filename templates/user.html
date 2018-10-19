@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+{% set numbers = [0,1,2,3,4,5,6,7,8,9] %}
+<h1>Hello
+    {% if username %}
+        {{ username }}
+    {% else %}
+        World
+    {%- endif -%}
+    !
+
+</h1>
+{% for number in numbers %}
+    <h2>Header #{{ number }}</h2>
+{% endfor %}
+</body>
+</html>
