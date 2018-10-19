@@ -11,18 +11,11 @@
 
 </head>
 <body>
-{% set numbers = [0,1,2,3,4,5,6,7,8,9] %}
-<h1>Hello
-    {% if username %}
-        {{ username }}
-    {% else %}
-        World
-    {%- endif -%}
-    !
-
-</h1>
-{% for number in numbers %}
-    <h2>Header #{{ number }}</h2>
-{% endfor %}
+{% if username %}
+    <h1>Hello{{ username }}</h1>
+{% else %}
+    <h1>Hello World!</h1>
+{% endif %}
+{% include 'links.html' %}
 </body>
 </html>
