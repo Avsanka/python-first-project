@@ -8,12 +8,14 @@ def generate_links():
         pinkblacklink = url_for('hello_user', username='Dave Grohl')
         KurtCobain_the_Great_link = url_for('hello_user', username='Kurt Cobain')
         index_link = url_for('index')
-        index_with_params_link = url_for('index' param1='param1' param2='param2')
+        index_with_params_link = url_for('index',
+        param1='param1',
+        param2='param2')
 
         links = {
-            "Dave Grohl": pinkblacklink
-            "Kurt Cobain": KurtCobain_the_Great_link
-            "Krist Novoselic": index_link
+            "Dave Grohl": pinkblacklink,
+            "Kurt Cobain": KurtCobain_the_Great_link,
+            "Krist Novoselic": index_link,
             "Index with params": index_with_params_link
         }
     return links
@@ -29,7 +31,7 @@ def index():
 @app.route('/user/<username>')
 def hello_user(username=None):
     links=generate_links()
-    return render_template('user.html', username=username,)
+    return render_template('user.html', username=username,links=links)
 
 
 with app.test_request_context():
