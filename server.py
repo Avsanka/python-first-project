@@ -7,7 +7,7 @@ def generate_links():
     with app.test_request_context():
         pinkblacklink = url_for('hello_user', username='Dave Grohl')
         KurtCobain_the_Great_link = url_for('hello_user', username='Kurt Cobain')
-        index_link = url_for('index')
+        index_link = url_for('hello_user', username='Krist Novoselic')
         index_with_params_link = url_for('index',
         param1='param1',
         param2='param2')

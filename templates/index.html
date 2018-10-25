@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User profile</title>
-    <link rel="stylesheet" href="/static/main.css">
-    <style>
-        body{
-            background-color: pink;
-        }
-    </style>
+{% extends "base.html" %}
 
-</head>
-<body>
-<h1>NIRVANA</h1>
-{% include 'links.html' %}
-</body>
-</html>
+{% block title %}Our First page with Python{% endblock %}
+
+{% block content %}
+    <h1>Hello World!</h1>
+{% endblock %}
+
+
