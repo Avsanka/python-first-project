@@ -6,13 +6,16 @@ app = Flask(__name__)
 def generate_links():
     with app.test_request_context():
         pinkblacklink = url_for('hello_user', username='Dave Grohl')
-        KurtCobain_the_Great_link = url_for('hello_user', username='Kurt Cobain The Great')
+        KurtCobain_the_Great_link = url_for('hello_user', username='Kurt Cobain')
         index_link = url_for('index')
-        links = (
-            (" Dave Grohl", pinkblacklink),
-            (" Kurt Cobain", KurtCobain_the_Great_link),
-            (" Krist Novoselic", index_link),
-        )
+        index_with_params_link = url_for('index' param1='param1' param2='param2')
+
+        links = {
+            "Dave Grohl": pinkblacklink
+            "Kurt Cobain": KurtCobain_the_Great_link
+            "Krist Novoselic": index_link
+            "Index with params": index_with_params_link
+        }
     return links
 
 
