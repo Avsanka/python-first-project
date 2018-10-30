@@ -5,18 +5,18 @@ app = Flask(__name__)
 
 def generate_links():
     with app.test_request_context():
-        pinkblacklink = url_for('hello_user', username='Dave Grohl')
-        KurtCobain_the_Great_link = url_for('hello_user', username='Kurt Cobain')
-        index_link = url_for('hello_user', username='Krist Novoselic')
+        pinkblacklink = url_for('hello_user', username='Каталог')
+        KurtCobain_the_Great_link = url_for('hello_user', username='Новости')
+        index_link = url_for('hello_user', username='Корзина')
         index_with_params_link = url_for('index',
         param1='param1',
         param2='param2')
 
         links = {
-            "Dave Grohl": pinkblacklink,
-            "Kurt Cobain": KurtCobain_the_Great_link,
-            "Krist Novoselic": index_link,
-            "Index with params": index_with_params_link
+            "Каталог": pinkblacklink,
+            "Новости": KurtCobain_the_Great_link,
+            "  ": index_link,
+            "Корзина": index_with_params_link
         }
     return links
 
